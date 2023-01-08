@@ -3,7 +3,7 @@ services:
     watchtower:
         restart: always
         container_name: watchtower
-        command: --include-restarting --label-enable
+        command: --include-restarting --label-enable --cleanup
         image: containrrr/watchtower
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
